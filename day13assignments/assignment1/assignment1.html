@@ -1,0 +1,25 @@
+<html>
+<body>
+
+<h1>Dynamically remove an HTML element from DOM, on button click</h1>
+
+<p id="demo"></p>
+
+<input type="button" id="btn" value = "remove" onclick = "empty()"/>
+
+<script>
+var text = '{"names":[' +'{"firstName":"Anna","lastName":"Smith" },'  +'{"firstName":"harini","lastName":"kaur" },' +'{"firstName":"raadhe","lastName":"antim" }]}';
+
+const name = JSON.parse(text);
+
+document.getElementById("demo").innerHTML =name.names[1].firstName + " " + name.names[1].lastName;
+
+function empty(){
+    document.getElementById("demo").remove();
+}
+
+</script>
+
+</body>
+</html>
+
